@@ -1,0 +1,23 @@
+{% extends 'work/main.html' %}
+
+
+
+{% block content %}
+
+
+    <div class="card card-body">
+        <h2>Update</h2>
+        
+        <form class="update-btn" action="" method="POST">
+            {% csrf_token %}
+
+            {{ form.body }}
+
+            <div>
+                <input class="btn btn-outline-primary" type="submit" value="Update">
+                <a class="btn btn-outline-secondary" href="{% url 'home' %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
